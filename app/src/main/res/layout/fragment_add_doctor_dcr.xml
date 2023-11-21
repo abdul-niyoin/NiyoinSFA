@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".view.fragments.AddDoctorDcrFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16pxh"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:padding="@dimen/_4pxh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtInbox"
+                style="@style/txtDMSansbold12_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@{frameThirteenVM.frameThirteenModel.txtInbox}"
+                android:visibility="gone"
+                tools:text="@string/lbl_user_type" />
+
+            <TextView
+                android:id="@+id/txtInboxOne"
+                style="@style/txtDMSansbold14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_select_tp_date"
+                tools:text="@string/lbl_select_tp_date" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3pxh"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_marginEnd="@dimen/_14pxh"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+                    android:id="@+id/linearRowdate"
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_4pxh"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/selected_tp_view"
+                        style="@style/txtDMSansmedium14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_22pxh"
+                        android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_marginBottom="@dimen/_10pxv"
+                        android:layout_weight="0.78"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_11_08_2023"
+                        tools:text="@string/lbl_11_08_2023" />
+
+                    <ImageView
+                        android:id="@+id/date_calendar"
+                        android:layout_width="@dimen/_20pxh"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_marginStart="@dimen/_172pxh"
+                        android:layout_marginTop="@dimen/_9pxv"
+                        android:layout_marginEnd="@dimen/_28pxh"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_calendar_7"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_calendar_7" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RadioGroup
+                android:id="@+id/linearRowlabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16pxh"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_divert"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_divert" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_additional"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_additional" />
+
+                <ImageView
+                    android:id="@+id/imageClose"
+                    android:layout_width="@dimen/_20pxh"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_34pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_close"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_close" />
+
+                <!--                <LinearLayout android:id="@+id/linearRowlabelOne"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginBottom="@dimen/_2pxv"-->
+                <!--                    android:layout_marginStart="@dimen/_91pxh"-->
+                <!--                    android:layout_marginTop="@dimen/_1pxv"-->
+                <!--                    android:layout_weight="0.69"-->
+                <!--                    android:layout_width="0dp" android:orientation="horizontal">-->
+                <!--                    <RadioButton-->
+                <!--                        android:buttonTint="@color/bluegray_800"-->
+                <!--                        android:ellipsize="end"-->
+                <!--                        android:fontFamily="@font/ibm_plex_sans"-->
+                <!--                        android:id="@+id/rbLabelOne"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="@dimen/_1pxv"-->
+                <!--                        android:layout_weight="0.83"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:paddingBottom="@dimen/_1pxv"-->
+                <!--                        android:paddingStart="@dimen/_10pxh"-->
+                <!--                        android:paddingTop="@dimen/_1pxv"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:text="@string/lbl_additional"-->
+                <!--                        android:textColor="@color/bluegray_800"-->
+                <!--                        android:textFontWeight="400"-->
+                <!--                        android:textSize="@dimen/_14pxh"-->
+                <!--                        android:textStyle="bold" tools:text="@string/lbl_additional"/>-->
+                <!--                    <ImageView android:id="@+id/imageClose"-->
+                <!--                        android:layout_height="@dimen/_20pxh"-->
+                <!--                        android:layout_marginBottom="@dimen/_1pxv"-->
+                <!--                        android:layout_marginStart="@dimen/_34pxh"-->
+                <!--                        android:layout_width="@dimen/_20pxh"-->
+                <!--                        android:scaleType="fitXY"-->
+                <!--                        android:src="@drawable/img_close"-->
+                <!--                        tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>-->
+                <!--                </LinearLayout>-->
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16pxh"
+                android:gravity="center_vertical"
+                android:id="@+id/indv_joint_group"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_weight="1"
+                    android:id="@+id/individual_radio_btn"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_individual"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_individual" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="1"
+                    android:id="@+id/joint_radio_btn"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_joint"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_joint" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20pxh"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_marginStart="@dimen/_34pxh"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:scaleType="fitXY"
+                    android:visibility="invisible"
+                    android:src="@drawable/img_close"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_close" />
+
+                <!--                <LinearLayout android:id="@+id/linearRowlabelOne"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginBottom="@dimen/_2pxv"-->
+                <!--                    android:layout_marginStart="@dimen/_91pxh"-->
+                <!--                    android:layout_marginTop="@dimen/_1pxv"-->
+                <!--                    android:layout_weight="0.69"-->
+                <!--                    android:layout_width="0dp" android:orientation="horizontal">-->
+                <!--                    <RadioButton-->
+                <!--                        android:buttonTint="@color/bluegray_800"-->
+                <!--                        android:ellipsize="end"-->
+                <!--                        android:fontFamily="@font/ibm_plex_sans"-->
+                <!--                        android:id="@+id/rbLabelOne"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginTop="@dimen/_1pxv"-->
+                <!--                        android:layout_weight="0.83"-->
+                <!--                        android:layout_width="0dp"-->
+                <!--                        android:paddingBottom="@dimen/_1pxv"-->
+                <!--                        android:paddingStart="@dimen/_10pxh"-->
+                <!--                        android:paddingTop="@dimen/_1pxv"-->
+                <!--                        android:singleLine="true"-->
+                <!--                        android:text="@string/lbl_additional"-->
+                <!--                        android:textColor="@color/bluegray_800"-->
+                <!--                        android:textFontWeight="400"-->
+                <!--                        android:textSize="@dimen/_14pxh"-->
+                <!--                        android:textStyle="bold" tools:text="@string/lbl_additional"/>-->
+                <!--                    <ImageView android:id="@+id/imageClose"-->
+                <!--                        android:layout_height="@dimen/_20pxh"-->
+                <!--                        android:layout_marginBottom="@dimen/_1pxv"-->
+                <!--                        android:layout_marginStart="@dimen/_34pxh"-->
+                <!--                        android:layout_width="@dimen/_20pxh"-->
+                <!--                        android:scaleType="fitXY"-->
+                <!--                        android:src="@drawable/img_close"-->
+                <!--                        tools:ignore="ContentDescription" tools:src="@drawable/img_close"/>-->
+                <!--                </LinearLayout>-->
+            </RadioGroup>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/joint_name_wrapper"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_16pxh"
+                app:cardCornerRadius="@dimen/_20pxh"
+                android:visibility="gone"
+                app:cardElevation="@dimen/_5pxh"
+                >
+                <EditText
+                    android:ellipsize="end"
+                    android:hint="Enter the name"
+                    android:inputType="text"
+                    android:id="@+id/joint_name_box"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/bluegray_100"
+                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_19pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_from_area"
+                style="@style/txtDMSansbold12" tools:text="@string/lbl_from_area"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh"
+                >
+                <LinearLayout
+                    android:layout_height="wrap_content"
+
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp" android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                    <ImageView
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_width="@dimen/_14pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_6pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_to_area"
+                style="@style/txtDMSansbold12" tools:text="@string/lbl_to_area"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh"
+                >
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                    <TextView android:ellipsize="end"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp" android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                    <ImageView
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_width="@dimen/_14pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/txtInboxTwo"
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="Select Type"
+                tools:text="Select Type" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+                    android:id="@+id/linearRowselect"
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtSelect"
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        tools:text="@string/lbl_select" />
+
+                    <ImageView
+                        android:id="@+id/imageArrowTwelve"
+                        android:layout_width="@dimen/_14pxh"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="Select Doctor"
+                tools:text="Select Doctor" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        tools:text="@string/lbl_select" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_14pxh"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="Focus Product"
+                tools:text="Focus Product" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        tools:text="@string/lbl_select" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_14pxh"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="Other Product"
+                tools:text="Other Product" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        tools:text="@string/lbl_select" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_14pxh"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_20pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="Visit with"
+                tools:text="Visit with" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxv"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        tools:text="@string/lbl_select" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_14pxh"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_16pxh"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="DCR/Reminder"
+                style="@style/txtDMSansbold12" tools:text="DCR/Reminder"/>
+            <RadioGroup
+                android:id="@+id/linearRowlabelTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbLabelTwo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:checked="true"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="DCR"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="DCR" />
+
+                <RadioButton
+                    android:id="@+id/rbLabelThree"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_66pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="Reminder"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Reminder" />
+            </RadioGroup>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_16pxh"
+                app:cardCornerRadius="@dimen/_20pxh"
+                app:cardElevation="@dimen/_5pxh"
+                >
+                <EditText
+                    android:ellipsize="end"
+                    android:hint="Remark"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/bluegray_100"
+                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/msg_gift_sample_det"
+                tools:text="@string/msg_gift_sample_det" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_pob_details"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/msg_gift_sample_det" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtInboxSeven"
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_pob_details"
+                tools:text="@string/lbl_pob_details" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbLabelSix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_pob_details"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_pob_details" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtInboxEight"
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_e_detailing"
+                tools:text="@string/lbl_e_detailing" />
+
+            <RadioButton
+                android:id="@+id/rbLabelNine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/bluegray_800"
+                android:ellipsize="end"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_e_detailing"
+                android:textColor="@color/bluegray_800"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold"
+                tools:text="@string/lbl_e_detailing" />
+
+            <LinearLayout
+                android:id="@+id/linearRowtext"
+                style="@style/groupStylelight_green_400cornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtText"
+                    style="@style/txtDMSansbold14_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_127pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_marginBottom="@dimen/_12pxv"
+                    android:layout_weight="0.7"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_submit"
+                    android:textAllCaps="true"
+                    tools:text="@string/lbl_submit" />
+
+                <ImageView
+                    android:id="@+id/imageArrowright"
+                    android:layout_width="@dimen/_22pxh"
+                    android:layout_height="@dimen/_8pxh"
+                    android:layout_marginStart="@dimen/_86pxh"
+                    android:layout_marginTop="@dimen/_17pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_17pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_arrowright" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

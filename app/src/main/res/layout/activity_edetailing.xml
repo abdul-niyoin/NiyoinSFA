@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activities.EDetailingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:gravity="center_vertical"
+            >
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="@dimen/tenDpMargin"
+                >
+
+                <TextView
+                    style="@style/txtDMSansbold18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/white"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="Sync"
+                    tools:text="Sync" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="@dimen/tenDpMargin"
+                    android:src="@drawable/sync_img"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/sync_img" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar_layout"
+        android:layout_margin="@dimen/_8pxh"
+        android:padding="@dimen/mediumPadding"
+        android:orientation="vertical">
+
+        <RadioGroup android:id="@+id/rgRadiogrouplabel"
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <RadioButton
+                android:buttonTint="@color/bluegray_800"
+                android:ellipsize="end"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:id="@+id/rbLabel"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_doctor"
+                android:textColor="@color/bluegray_800"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_doctor"/>
+            <RadioButton
+                android:buttonTint="@color/bluegray_800"
+                android:ellipsize="end"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:id="@+id/rbLabelOne"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_98pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_chemist"
+                android:textColor="@color/bluegray_800"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_chemist"/>
+        </RadioGroup>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8pxv"
+            app:cardCornerRadius="@dimen/_20pxh"
+            app:cardElevation="@dimen/_5pxh"
+            android:layout_marginBottom="@dimen/tenDpMargin"
+            >
+            <LinearLayout android:id="@+id/linearRowprice"
+                android:layout_height="wrap_content"
+
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_8pxv"
+                    android:layout_marginStart="@dimen/_18pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_weight="0.86"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@string/lbl_select"
+                    style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                <ImageView android:id="@+id/imageArrowTwelve"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_marginBottom="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_14pxh"
+                    android:layout_marginStart="@dimen/_186pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_width="@dimen/_14pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrow12_14x14"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:layout_gravity="bottom|start"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <RadioButton
+                android:buttonTint="@color/bluegray_800"
+                android:ellipsize="end"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/all_images_radio"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_all_images"
+                android:textColor="@color/bluegray_800"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_all_images"/>
+            <RadioButton
+                android:buttonTint="@color/bluegray_800"
+                android:ellipsize="end"
+                android:id="@+id/focus_product_radio"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_98pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content"
+                android:paddingBottom="@dimen/_1pxv"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_focus_product"
+                android:textColor="@color/bluegray_800"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:text="@string/lbl_focus_product"/>
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

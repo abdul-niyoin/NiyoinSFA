@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lbl_utility">Utility</string>
+    <string name="lbl_view_doctor">View Doctor</string>
+    <string name="lbl_view_chemist">View Chemist</string>
+    <string name="lbl_view_stockist">View Stockist</string>
+    <string name="phone">Phone</string>
+    <string name="lbl_city">City</string>
+    <string name="update_doctor_location">Update Doctor Location</string>
+    <string name="update_chemist_location">Update Chemist Location</string>
+    <string name="lbl_doctor_search">Search Doctor</string>
+    <string name="lbl_chemist_search">Search Chemist</string>
+    <string name="update_stockist_location">Update Stockist Location</string>
+    <string name="lbl_stockist_search">Search Stockist</string>
+    <string name="lbl_leave_type">Leave Type</string>
+    <string name="lbl_from">From</string>
+    <string name="lbl_to">To</string>
+    <string name="lbl_old_password">Old Password</string>
+    <string name="lbl_new_password">New Password</string>
+    <string name="lbl_confirm_password">Confirm Password</string>
+    <string name="leave_application">Leave Application</string>
+    <string name="lbl_all_images">All Images</string>
+    <string name="lbl_focus_product">Focus Product</string>
+    <string name="lbl_gift">Gift</string>
+    <string name="lbl_gift_sample_report">Gift/Sample Report</string>
+    <string name="lbl_sample">Sample</string>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       android:layout_margin="@dimen/_5pxh"
+       android:orientation="vertical"
+       app:layout_constraintBottom_toBottomOf="parent"
+       >
+
+       <LinearLayout android:id="@+id/frameStacksave"
+           android:orientation="horizontal"
+           android:gravity="center_vertical"
+           android:layout_height="wrap_content" android:layout_width="match_parent">
+           <ImageView android:id="@+id/imageSave"
+               android:layout_gravity="start"
+               android:layout_height="@dimen/_20pxh"
+               android:layout_width="@dimen/_20pxh"
+               android:scaleType="fitXY" android:src="@drawable/img_save"
+               tools:ignore="ContentDescription" tools:src="@drawable/img_save"/>
+           <TextView android:ellipsize="end"
+               android:id="@+id/txtInboxOne"
+               android:layout_gravity="start"
+               android:layout_height="wrap_content"
+               android:layout_width="0dp"
+               android:gravity="center"
+               android:layout_weight="1"
+               android:lineSpacingExtra="@dimen/_4pxh"
+               android:singleLine="true"
+               android:text="@{listsaveRowModel.txtInboxOne}"
+               style="@style/txtRalewayregular18" tools:text="@string/lbl_joint_work"/>
+           <ImageView android:id="@+id/imageArrowThirteen"
+               android:layout_height="@dimen/_13pxh"
+               android:layout_width="@dimen/_20pxh"
+               android:scaleType="fitXY"
+               android:src="@drawable/img_arrow13"
+               tools:ignore="ContentDescription" tools:src="@drawable/img_arrow13"/>
+       </LinearLayout>
+       <View android:background="@color/gray_301"
+           android:id="@+id/lineLineFour"
+           android:layout_height="@dimen/_2pxv"
+           android:layout_marginTop="@dimen/_5pxv" android:layout_width="match_parent"/>
+   </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
