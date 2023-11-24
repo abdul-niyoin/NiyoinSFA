@@ -1,11 +1,14 @@
 package com.niyoinsfa.app.view.activities
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.niyoinsfa.app.R
 import com.niyoinsfa.app.databinding.ActivityMainBinding
+import com.permissionx.guolindev.PermissionX
 
 class MainActivity : BaseActivity() {
 
@@ -60,5 +63,18 @@ class MainActivity : BaseActivity() {
             startActivity(Intent(context,GiftSampleActivity::class.java))
         }
 
+        getLocationPermission()
+    }
+
+    private fun getLocationPermission(){
+        PermissionX.init(this)
+            .permissions(Manifest.permission.ACCESS_FINE_LOCATION)
+            .request { allGranted, grantedList, deniedList ->
+                if (allGranted) {
+//                    Toast.makeText(this, "Location permission granted successfully", Toast.LENGTH_LONG).show()
+                } else {
+//                    Toast.makeText(this, "Permission Deny", Toast.LENGTH_LONG).show()
+                }
+            }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     tools:context=".view.fragments.AddChemistDcrFragment">
 
@@ -12,242 +12,290 @@
         android:layout_height="wrap_content">
 
 
-        <LinearLayout android:gravity="start"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/_16pxh"
+            android:gravity="start"
+            android:orientation="vertical"
             android:padding="@dimen/_4pxh"
-            android:layout_width="match_parent" android:orientation="vertical">
-            <TextView android:ellipsize="end"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
-                android:layout_marginTop="@dimen/_11pxv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/txtDMSansbold14"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_11pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_select_tp_date"
-                style="@style/txtDMSansbold14" tools:text="@string/lbl_select_tp_date"/>
+                tools:text="@string/lbl_select_tp_date" />
 
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_14pxh"
                 android:layout_marginStart="@dimen/_3pxh"
                 android:layout_marginTop="@dimen/_11pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                >
+                android:layout_marginEnd="@dimen/_14pxh"
+                app:cardCornerRadius="@dimen/_20pxh">
+
                 <LinearLayout
+                    style="@style/groupStylewhite_A700cornerRadius"
+                    android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_4pxh"
+                    android:orientation="horizontal">
 
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
+                    <TextView
                         android:id="@+id/selected_tp_view"
+                        style="@style/txtDMSansmedium14"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_10pxv"
                         android:layout_marginStart="@dimen/_22pxh"
                         android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_marginBottom="@dimen/_10pxv"
                         android:layout_weight="0.78"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_11_08_2023"
-                        style="@style/txtDMSansmedium14" tools:text="@string/lbl_11_08_2023"/>
-                    <ImageView android:id="@+id/date_calendar"
+                        tools:text="@string/lbl_11_08_2023" />
+
+                    <ImageView
+                        android:id="@+id/date_calendar"
+                        android:layout_width="@dimen/_20pxh"
                         android:layout_height="@dimen/_20pxh"
-                        android:layout_marginBottom="@dimen/_11pxv"
-                        android:layout_marginEnd="@dimen/_28pxh"
                         android:layout_marginStart="@dimen/_172pxh"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:layout_width="@dimen/_20pxh"
+                        android:layout_marginEnd="@dimen/_28pxh"
+                        android:layout_marginBottom="@dimen/_11pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_calendar_7"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_7"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_calendar_7" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
 
-            <TextView android:ellipsize="end"
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
                 android:layout_marginStart="@dimen/_4pxh"
                 android:layout_marginTop="@dimen/_19pxv"
-                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_from_area"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_from_area"/>
+                tools:text="@string/lbl_from_area" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                >
+                app:cardCornerRadius="@dimen/_20pxh">
+
                 <LinearLayout
-                    android:layout_height="wrap_content"
+                    style="@style/groupStylewhite_A700cornerRadius"
 
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_marginStart="@dimen/_18pxh"
                         android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_weight="0.75"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_select"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                        tools:text="@string/lbl_select" />
+
                     <ImageView
+                        android:layout_width="@dimen/_14pxh"
                         android:layout_height="@dimen/_14pxh"
-                        android:layout_marginBottom="@dimen/_12pxv"
-                        android:layout_marginEnd="@dimen/_14pxh"
                         android:layout_marginStart="@dimen/_227pxh"
                         android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_width="@dimen/_14pxh"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrow12_14x14"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.appcompat.widget.AppCompatCheckBox
+                style="@style/txtDMSansbold14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/eightDpMargin"
-                android:text="All Area"
-                style="@style/txtDMSansbold14"
-                />
+                android:text="All Area" />
 
-            <TextView android:ellipsize="end"
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
                 android:layout_marginStart="@dimen/_6pxh"
                 android:layout_marginTop="@dimen/_16pxv"
-                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_to_area"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_to_area"/>
+                tools:text="@string/lbl_to_area" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                >
+                app:cardCornerRadius="@dimen/_20pxh">
+
                 <LinearLayout
-                    android:layout_height="wrap_content"
+                    style="@style/groupStylewhite_A700cornerRadius"
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_marginStart="@dimen/_18pxh"
                         android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_weight="0.75"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_select"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                        tools:text="@string/lbl_select" />
+
                     <ImageView
+                        android:layout_width="@dimen/_14pxh"
                         android:layout_height="@dimen/_14pxh"
-                        android:layout_marginBottom="@dimen/_12pxv"
-                        android:layout_marginEnd="@dimen/_14pxh"
                         android:layout_marginStart="@dimen/_227pxh"
                         android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_width="@dimen/_14pxh"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrow12_14x14"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView android:ellipsize="end"
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
                 android:layout_marginStart="@dimen/_2pxh"
                 android:layout_marginTop="@dimen/_20pxv"
-                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_chemist_name"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_chemist_name"/>
+                tools:text="@string/lbl_chemist_name" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                >
+                app:cardCornerRadius="@dimen/_20pxh">
+
                 <LinearLayout
-                    android:layout_height="wrap_content"
+                    style="@style/groupStylewhite_A700cornerRadius"
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_marginStart="@dimen/_18pxh"
                         android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_weight="0.75"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_select"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                        tools:text="@string/lbl_select" />
+
                     <ImageView
+                        android:layout_width="@dimen/_14pxh"
                         android:layout_height="@dimen/_14pxh"
-                        android:layout_marginBottom="@dimen/_12pxv"
-                        android:layout_marginEnd="@dimen/_14pxh"
                         android:layout_marginStart="@dimen/_227pxh"
                         android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_width="@dimen/_14pxh"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrow12_14x14"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView android:ellipsize="end"
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
                 android:layout_marginStart="@dimen/_2pxh"
                 android:layout_marginTop="@dimen/_20pxv"
-                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="Visit with"
-                style="@style/txtDMSansbold12" tools:text="Visit with"/>
+                tools:text="Visit with" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                >
+                app:cardCornerRadius="@dimen/_20pxh">
+
                 <LinearLayout
-                    android:layout_height="wrap_content"
+                    style="@style/groupStylewhite_A700cornerRadius"
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_marginStart="@dimen/_18pxh"
                         android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_weight="0.75"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_select"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                        tools:text="@string/lbl_select" />
+
                     <ImageView
+                        android:layout_width="@dimen/_14pxh"
                         android:layout_height="@dimen/_14pxh"
-                        android:layout_marginBottom="@dimen/_12pxv"
-                        android:layout_marginEnd="@dimen/_14pxh"
                         android:layout_marginStart="@dimen/_227pxh"
                         android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_width="@dimen/_14pxh"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrow12_14x14"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -257,21 +305,22 @@
                 android:layout_marginStart="@dimen/_4pxh"
                 android:layout_marginTop="@dimen/_30pxv"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
+                app:cardElevation="@dimen/_5pxh">
+
                 <EditText
+                    style="@style/etSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:hint="Order No"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
+                    android:inputType="number"
                     android:paddingStart="@dimen/_22pxh"
                     android:paddingTop="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
                     android:singleLine="true"
                     android:textColorHint="@color/bluegray_100"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    tools:ignore="Autofill" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -280,21 +329,22 @@
                 android:layout_marginStart="@dimen/_4pxh"
                 android:layout_marginTop="@dimen/_30pxv"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
+                app:cardElevation="@dimen/_5pxh">
+
                 <EditText
+                    style="@style/etSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:hint="Value"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
+                    android:inputType="number"
                     android:paddingStart="@dimen/_22pxh"
                     android:paddingTop="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
                     android:singleLine="true"
                     android:textColorHint="@color/bluegray_100"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    tools:ignore="Autofill" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -303,97 +353,379 @@
                 android:layout_marginStart="@dimen/_4pxh"
                 android:layout_marginTop="@dimen/_30pxv"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
+                app:cardElevation="@dimen/_5pxh">
+
                 <EditText
+                    style="@style/etSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:hint="Detail"
                     android:inputType="text"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_22pxh"
                     android:paddingTop="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
                     android:singleLine="true"
                     android:textColorHint="@color/bluegray_100"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    tools:ignore="Autofill" />
             </androidx.cardview.widget.CardView>
 
-            <TextView android:ellipsize="end"
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
                 android:layout_marginStart="@dimen/_8pxh"
                 android:layout_marginTop="@dimen/_21pxv"
-                android:layout_width="wrap_content"
-                android:lineSpacingExtra="@dimen/_5pxh"
-                android:singleLine="true"
-                android:text="@string/lbl_pob_details"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_pob_details"/>
-            <RadioButton android:buttonTint="@color/bluegray_800"
-                android:ellipsize="end"
-                android:fontFamily="@font/ibm_plex_sans"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:paddingBottom="@dimen/_1pxv"
-                android:paddingStart="@dimen/_10pxh"
-                android:paddingTop="@dimen/_1pxv"
-                android:singleLine="true"
-                android:text="@string/lbl_pob_details"
-                android:textColor="@color/bluegray_800"
-                android:textFontWeight="400"
-                android:textSize="@dimen/_14pxh"
-                android:textStyle="bold" tools:text="@string/lbl_pob_details"/>
-            <TextView android:ellipsize="end"
-                android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/_10pxh"
-                android:layout_marginStart="@dimen/_10pxh"
-                android:layout_marginTop="@dimen/_22pxv"
-                android:layout_width="wrap_content"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
-                android:text="@string/lbl_e_detailing"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_e_detailing"/>
-            <RadioButton android:buttonTint="@color/bluegray_800"
+                android:text="@string/lbl_pob_details"
+                tools:text="@string/lbl_pob_details" />
+
+            <RadioButton
+                android:id="@+id/pob_details_radio_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/bluegray_800"
                 android:ellipsize="end"
                 android:fontFamily="@font/ibm_plex_sans"
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
                 android:paddingStart="@dimen/_10pxh"
                 android:paddingTop="@dimen/_1pxv"
+                android:paddingBottom="@dimen/_1pxv"
                 android:singleLine="true"
-                android:text="@string/lbl_e_detailing"
+                android:text="@string/lbl_pob_details"
                 android:textColor="@color/bluegray_800"
                 android:textFontWeight="400"
                 android:textSize="@dimen/_14pxh"
-                android:textStyle="bold" tools:text="@string/lbl_e_detailing"/>
-            <LinearLayout android:gravity="end"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_16pxv"
+                android:textStyle="bold"
+                tools:text="@string/lbl_pob_details" />
+
+            <RadioGroup
+                android:id="@+id/productwise_lumpsum_radio_group"
                 android:layout_width="match_parent"
-                android:orientation="horizontal" style="@style/groupStylelight_green_400cornerRadius">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxh"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/products_wise_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_productwise"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_productwise" />
+
+                <RadioButton
+                    android:id="@+id/lumpsum_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_lumpsum"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_lumpsum" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/productwise_child_options_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxh"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/direct_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="Direct"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Direct" />
+
+                <RadioButton
+                    android:id="@+id/qty_rate_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="Qty * Rate"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Qty * Rate" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/qtyrate_child_options_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8pxh"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/mrp_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="MRP"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Direct" />
+
+                <RadioButton
+                    android:id="@+id/pts_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="PTS"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Qty * Rate" />
+
+                <RadioButton
+                    android:id="@+id/ptr_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="PTR"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Qty * Rate" />
+
+                <RadioButton
+                    android:id="@+id/ptss_radio_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/bluegray_800"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/ibm_plex_sans"
+                    android:paddingStart="@dimen/_10pxh"
+                    android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
+                    android:singleLine="true"
+                    android:text="PTSS"
+                    android:textColor="@color/bluegray_800"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="bold"
+                    tools:text="Qty * Rate" />
+
+            </RadioGroup>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_8pxh"
+                android:visibility="gone"
+                android:id="@+id/lumpsum_detail_wrapper"
+                >
                 <TextView android:ellipsize="end"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_select_lumpsum"
+                    style="@style/txtDMSansbold12" tools:text="@string/lbl_select_lumpsum"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    app:cardCornerRadius="@dimen/_20pxh"
+                    >
+                    <LinearLayout
+                        android:layout_height="wrap_content"
+
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                        <TextView android:ellipsize="end"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_8pxv"
+                            android:layout_marginStart="@dimen/_18pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_weight="0.75"
+                            android:layout_width="0dp" android:singleLine="true"
+                            android:text="@string/lbl_select"
+                            style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
+                        <ImageView
+                            android:layout_height="@dimen/_14pxh"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:layout_marginEnd="@dimen/_14pxh"
+                            android:layout_marginStart="@dimen/_227pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_width="@dimen/_14pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow12_14x14"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_8pxh"
+                    app:cardCornerRadius="@dimen/_20pxh"
+                    app:cardElevation="@dimen/_5pxh">
+
+                    <EditText
+                        style="@style/etSolidRoundedOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:hint="Lumpsum Amount"
+                        android:inputType="number"
+                        android:paddingStart="@dimen/_22pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:textColorHint="@color/bluegray_100"
+                        tools:ignore="Autofill" />
+                </androidx.cardview.widget.CardView>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/_5pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_e_detailing"
+                tools:text="@string/lbl_e_detailing" />
+
+            <RadioButton
+                style="@style/DisabledRadioButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/bluegray_800"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:fontFamily="@font/ibm_plex_sans"
+                android:paddingStart="@dimen/_10pxh"
+                android:paddingTop="@dimen/_1pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_e_detailing"
+                android:textColor="@color/bluegray_800"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold"
+                tools:text="@string/lbl_e_detailing" />
+
+            <LinearLayout
+                style="@style/groupStylelight_green_400cornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/txtDMSansbold14_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_127pxh"
                     android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_marginBottom="@dimen/_12pxv"
                     android:layout_weight="0.7"
-                    android:layout_width="0dp"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_5pxh"
                     android:singleLine="true"
                     android:text="@string/lbl_submit"
                     android:textAllCaps="true"
-                    style="@style/txtDMSansbold14_1" tools:text="@string/lbl_submit"/>
+                    tools:text="@string/lbl_submit" />
+
                 <ImageView
+                    android:layout_width="@dimen/_22pxh"
                     android:layout_height="@dimen/_8pxh"
-                    android:layout_marginBottom="@dimen/_17pxv"
-                    android:layout_marginEnd="@dimen/_16pxh"
                     android:layout_marginStart="@dimen/_86pxh"
                     android:layout_marginTop="@dimen/_17pxv"
-                    android:layout_width="@dimen/_22pxh"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginBottom="@dimen/_17pxv"
                     android:scaleType="fitXY"
                     android:src="@drawable/img_arrowright"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_arrowright" />
             </LinearLayout>
         </LinearLayout>
 

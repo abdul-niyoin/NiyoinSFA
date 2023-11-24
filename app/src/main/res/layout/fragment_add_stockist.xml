@@ -192,7 +192,7 @@
                 <EditText
                     android:ellipsize="end"
                     android:hint="@string/phone"
-                    android:inputType="text"
+                    android:inputType="phone"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:paddingBottom="@dimen/_11pxv"
@@ -214,7 +214,7 @@
                 <EditText
                     android:ellipsize="end"
                     android:hint="@string/lbl_mobile"
-                    android:inputType="text"
+                    android:inputType="phone"
                     android:layout_height="match_parent"
                     android:layout_width="match_parent"
                     android:paddingBottom="@dimen/_11pxv"

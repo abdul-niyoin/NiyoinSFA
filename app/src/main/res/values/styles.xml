@@ -551,4 +551,15 @@
         <item name="android:fontFamily">@font/dm_sans</item>
         <item name="android:textFontWeight" tools:targetApi="p">500</item>
     </style>
+
+    <style name="DisabledRadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textColor">@color/disabledTextColor</item>
+    </style>
+
+    <style name="FullScreenDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+<!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+    </style>
 </resources>

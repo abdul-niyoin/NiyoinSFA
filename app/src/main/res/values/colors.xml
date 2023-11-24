@@ -52,4 +52,5 @@
     <color name="white_A700">#ffffff</color>
     <color name="gray_600_3f">#3f808080</color>
     <color name="black_900_16">#16000000</color>
+    <color name="disabledTextColor">#808080</color>
 </resources>

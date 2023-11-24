@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import com.niyoinsfa.app.R
 import com.niyoinsfa.app.databinding.FragmentAddChemistDcrBinding
 import com.niyoinsfa.app.view.activities.BaseActivity
@@ -31,6 +32,72 @@ class AddChemistDcrFragment : Fragment() {
         binding.dateCalendar.setOnClickListener {
             openDatePicker()
         }
+        openDatePicker()
+
+
+        binding.pobDetailsRadioButton.setOnCheckedChangeListener(object :CompoundButton.OnCheckedChangeListener{
+            override fun onCheckedChanged(p0: CompoundButton?, isChecked: Boolean) {
+                if(isChecked){
+                    binding.productwiseLumpsumRadioGroup.visibility = View.VISIBLE
+                }
+            }
+        })
+
+        binding.productwiseLumpsumRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            // checkedId is the RadioButton ID that is currently selected
+            when (checkedId) {
+                R.id.products_wise_radio_button -> {
+                   binding.productwiseChildOptionsRadioGroup.visibility = View.VISIBLE
+                   binding.lumpsumDetailWrapper.visibility = View.GONE
+
+                }
+                R.id.lumpsum_radio_button -> {
+                    binding.lumpsumDetailWrapper.visibility = View.VISIBLE
+                    binding.productwiseChildOptionsRadioGroup.visibility = View.GONE
+                }
+
+            }
+        }
+
+        binding.productwiseChildOptionsRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            // checkedId is the RadioButton ID that is currently selected
+            when (checkedId) {
+                R.id.direct_radio_button -> {
+                    // open dialog
+                     binding.qtyrateChildOptionsRadioGroup.visibility = View.GONE
+                    val dialogFragment = SearchDialogFragment()
+                    dialogFragment.show(childFragmentManager, "SearchDialogFragment")
+                }
+                R.id.qty_rate_radio_button -> {
+                    binding.qtyrateChildOptionsRadioGroup.visibility = View.VISIBLE
+                }
+
+            }
+        }
+
+        binding.qtyrateChildOptionsRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            // checkedId is the RadioButton ID that is currently selected
+            when (checkedId) {
+                R.id.mrp_radio_button-> {
+                    // open dialog
+//                    binding.directChildOptionsRadioGroup.visibility = View.GONE
+//                    val dialogFragment = SearchDialogFragment()
+//                    dialogFragment.show(childFragmentManager, "SearchDialogFragment")
+                }
+                R.id.pts_radio_button -> {
+//                    binding.directChildOptionsRadioGroup.visibility = View.VISIBLE
+                }
+                R.id.ptr_radio_button->{
+                    val dialogFragment = SearchDialogFragment()
+                    dialogFragment.show(childFragmentManager, "SearchDialogFragment")
+                }
+                R.id.ptss_radio_button->{
+                    val dialogFragment = SearchDialogFragment()
+                    dialogFragment.show(childFragmentManager, "SearchDialogFragment")
+                }
+            }
+        }
+
         return binding.root
     }
 
@@ -50,7 +117,12 @@ class AddChemistDcrFragment : Fragment() {
             },
             year, month, day
         )
-
+        datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
         datePickerDialog.show()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 }

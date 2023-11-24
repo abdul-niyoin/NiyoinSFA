@@ -235,7 +235,7 @@
                 android:ellipsize="end"
                 android:hint="@string/lbl_distance"
                 android:id="@+id/etGroupEightyOne"
-                android:inputType="text"
+                android:inputType="numberDecimal"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:paddingBottom="@dimen/_11pxv"

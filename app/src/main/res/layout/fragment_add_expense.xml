@@ -174,7 +174,7 @@
               >
               <EditText
                  android:ellipsize="end" android:hint="@string/lbl_amt"
-                  android:inputType="text"
+                  android:inputType="number"
                   android:layout_height="wrap_content"
                   android:layout_width="match_parent"
                   android:paddingBottom="@dimen/_11pxv"

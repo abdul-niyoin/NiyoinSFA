@@ -187,6 +187,8 @@
     <string name="lbl_gift">Gift</string>
     <string name="lbl_gift_sample_report">Gift/Sample Report</string>
     <string name="lbl_sample">Sample</string>
+    <string name="lbl_select_lumpsum">Select Lumpsum</string>
+    <string name="lbl_dd_mm_yyyy">dd/mm/yyyy</string>
 
     <string-array name="leave_types">
         <item>Select</item>
@@ -194,5 +196,11 @@
         <item>Casual leave</item>
         <item>Privilege leave</item>
         <item>Leave without pay</item>
+    </string-array>
+
+    <string-array name="grades">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
     </string-array>
 </resources>

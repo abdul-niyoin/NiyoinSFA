@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.OnBackPressedCallback
+import com.example.awesomedialog.*
 import com.niyoinsfa.app.R
 import com.niyoinsfa.app.databinding.ActivityChemistDcrBinding
 import com.niyoinsfa.app.databinding.ActivityStockistDcrBinding
@@ -46,5 +48,20 @@ class StockistDcrActivity : BaseActivity() {
                 ViewStockistDcrFragment(),"view_stockist_dcr")
                 .commit()
         }
+
+        onBackPressedDispatcher.addCallback(this, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                AwesomeDialog.build(this@StockistDcrActivity)
+                    .body("You want to leave this form ?")
+                    .icon(R.drawable.info_img)
+                    .position(AwesomeDialog.POSITIONS.CENTER)
+                    .onPositive("Yes", buttonBackgroundColor = R.drawable.primary_bg) {
+                        finish()
+                    }
+                    .onNegative("No",buttonBackgroundColor = R.drawable.red_bg) {
+
+                    }.show()
+            }
+        })
     }
 }

@@ -33,7 +33,7 @@ class AddDoctorDcrFragment : Fragment() {
         binding.dateCalendar.setOnClickListener {
             openDatePicker()
         }
-
+        openDatePicker()
         binding.indvJointGroup.setOnCheckedChangeListener { group, checkedId ->
             // The checkedId parameter is the ID of the RadioButton that was selected.
             when (checkedId) {
@@ -65,7 +65,7 @@ class AddDoctorDcrFragment : Fragment() {
             },
             year, month, day
         )
-
+        datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
         datePickerDialog.show()
     }
 }

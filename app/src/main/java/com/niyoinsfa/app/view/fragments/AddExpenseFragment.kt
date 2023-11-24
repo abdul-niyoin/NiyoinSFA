@@ -29,8 +29,9 @@ class AddExpenseFragment : Fragment() {
         binding = FragmentAddExpenseBinding.inflate(inflater, container, false)
         binding.selectedTpView.text = BaseActivity.todayCurrentDateFormatted()
         binding.dateCalendar.setOnClickListener {
-            openDatePicker()
+//            openDatePicker()
         }
+
         return binding.root
     }
 

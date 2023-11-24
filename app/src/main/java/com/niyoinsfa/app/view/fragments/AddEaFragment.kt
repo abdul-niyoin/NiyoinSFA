@@ -31,6 +31,7 @@ class AddEaFragment : Fragment() {
         binding.dateCalendar.setOnClickListener {
             openDatePicker()
         }
+        openDatePicker()
         return binding.root
     }
 
@@ -50,7 +51,7 @@ class AddEaFragment : Fragment() {
             },
             year, month, day
         )
-
+        datePickerDialog.datePicker.minDate = System.currentTimeMillis() - 1000
         datePickerDialog.show()
     }
 }

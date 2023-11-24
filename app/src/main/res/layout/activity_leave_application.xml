@@ -116,8 +116,8 @@
                     android:layout_marginTop="@dimen/_12pxv"
                     android:layout_weight="0.81"
                     android:layout_width="0dp" android:singleLine="true"
-                    android:text="@string/lbl_yyyy_mm_dd"
-                    style="@style/txtDMSansmedium14" tools:text="@string/lbl_yyyy_mm_dd"/>
+                    android:text="@string/lbl_dd_mm_yyyy"
+                    style="@style/txtDMSansmedium14" tools:text="@string/lbl_dd_mm_yyyy"/>
                 <ImageView android:id="@+id/from_date_calendar"
                     android:layout_height="@dimen/_23pxh"
                     android:layout_marginBottom="@dimen/_7pxv"
@@ -160,8 +160,8 @@
                     android:layout_marginTop="@dimen/_12pxv"
                     android:layout_weight="0.81"
                     android:layout_width="0dp" android:singleLine="true"
-                    android:text="@string/lbl_yyyy_mm_dd"
-                    style="@style/txtDMSansmedium14" tools:text="@string/lbl_yyyy_mm_dd"/>
+                    android:text="@string/lbl_dd_mm_yyyy"
+                    style="@style/txtDMSansmedium14" tools:text="@string/lbl_dd_mm_yyyy"/>
                 <ImageView
                     android:id="@+id/to_date_calendar"
                     android:layout_height="@dimen/_23pxh"

@@ -14,7 +14,7 @@ import com.niyoinsfa.app.view.activities.BaseActivity
 import java.util.*
 
 
-class AddProgramFragment : Fragment() {
+class AddProgramFragment : Fragment(),OptionsAdapter.OnItemClickListener {
     private lateinit var binding: FragmentAddProgramBinding
     private lateinit var optionsAdapter: OptionsAdapter
 
@@ -44,12 +44,13 @@ class AddProgramFragment : Fragment() {
 
         optionsAdapter = OptionsAdapter(options)
         binding.recyclerView.adapter = optionsAdapter
+        optionsAdapter.setOnItemClickListener(this)
 
         binding.selectedTpView.text = BaseActivity.todayCurrentDateFormatted()
         binding.dateCalendar.setOnClickListener {
             openDatePicker()
         }
-
+        openDatePicker()
         return binding.root
     }
 
@@ -71,6 +72,15 @@ class AddProgramFragment : Fragment() {
         )
 
         datePickerDialog.show()
+    }
+
+    override fun onItemClick(position: Int) {
+         if(position ==0 ){
+           binding.areaWrapperLayout.visibility = View.VISIBLE
+         }
+        else{
+             binding.areaWrapperLayout.visibility = View.GONE
+         }
     }
 
 }
