@@ -24,40 +24,99 @@
             android:src="@drawable/niyoin_logo"
             />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/email"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@drawable/textinputboxdesign"-->
+<!--            android:layout_marginTop="@dimen/sixtyDpMargin"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:hint="@string/email"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textColorHint="@color/black"-->
+<!--            android:textSize="@dimen/mediumTextSize" />-->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/textinputboxdesign"
-            android:layout_marginTop="@dimen/sixtyDpMargin"
-            android:gravity="center_horizontal"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="@dimen/mediumTextSize" />
+            android:layout_marginTop="@dimen/TwentyDpMargin"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            app:cardCornerRadius="@dimen/_20pxh"
+            android:layout_marginBottom="@dimen/defaultDpMargin"
+            >
+            <EditText
+                android:ellipsize="end"
+                android:hint="@string/email"
+                android:id="@+id/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:textSize="@dimen/mediumTextSize"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_11pxv"
+                android:singleLine="true"
+                android:gravity="center_horizontal"
+                android:textColorHint="@color/black"
+                style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+        </androidx.cardview.widget.CardView>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/sixteenDpMargin"
-            android:background="@drawable/textinputboxdesign"
-            android:gravity="center_horizontal"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="@dimen/mediumTextSize" />
+            android:layout_marginTop="@dimen/_16pxh"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
+            app:cardCornerRadius="@dimen/_20pxh"
+            android:layout_marginBottom="@dimen/defaultDpMargin"
+            >
+            <EditText
+                android:ellipsize="end"
+                android:hint="@string/password"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_11pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:textSize="@dimen/mediumTextSize"
+                android:paddingStart="@dimen/_24pxh"
+                android:paddingTop="@dimen/_11pxv"
+                android:singleLine="true"
+                android:gravity="center_horizontal"
+                android:textColorHint="@color/black"
+                style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+        </androidx.cardview.widget.CardView>
 
-        <com.google.android.material.button.MaterialButton
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/login_btn"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/sixteenDpMargin"-->
+<!--            android:text="@string/login"-->
+<!--            android:textSize="@dimen/largeTextSize"-->
+<!--            app:backgroundTint="@color/primary" />-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
             android:id="@+id/login_btn"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/sixteenDpMargin"
-            android:text="@string/login"
+            android:layout_width="match_parent"
+            android:lineSpacingExtra="@dimen/_5pxh"
             android:textSize="@dimen/largeTextSize"
-            app:backgroundTint="@color/primary" />
+            android:paddingBottom="@dimen/_11pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_11pxv"
+            android:singleLine="true"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            style="@style/btnSolidRounded_1" tools:text="@string/login"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

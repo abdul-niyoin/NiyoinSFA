@@ -114,9 +114,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_8pxv"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="2dp"
             app:cardCornerRadius="@dimen/_20pxh"
             app:cardElevation="@dimen/_5pxh"
-            android:layout_marginBottom="@dimen/tenDpMargin"
+            android:layout_marginBottom="@dimen/defaultDpMargin"
             >
             <LinearLayout android:id="@+id/linearRowprice"
                 android:layout_height="wrap_content"

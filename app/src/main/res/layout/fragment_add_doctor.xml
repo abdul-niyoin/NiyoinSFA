@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fillViewport="true"
     tools:context=".view.fragments.AddDoctorFragment">
 
@@ -11,289 +11,343 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout android:gravity="start"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_width="match_parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/_16pxh"
+            android:gravity="start"
+            android:orientation="vertical"
             android:padding="@dimen/_4pxh"
-            android:orientation="vertical">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView android:ellipsize="end"
-                android:layout_gravity="center_horizontal"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_105pxh"
-                android:layout_marginStart="@dimen/_105pxh"
+            <TextView
+                style="@style/txtDMSansmedium18"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_105pxh"
+                android:layout_marginEnd="@dimen/_105pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
-                android:visibility="gone"
                 android:text="@string/lbl_add_doctor"
-                style="@style/txtDMSansmedium18" tools:text="@string/lbl_add_doctor"/>
-            <LinearLayout
                 android:visibility="gone"
+                tools:text="@string/lbl_add_doctor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_7pxh"
                 android:layout_marginTop="@dimen/_12pxv"
-                android:layout_width="match_parent" android:orientation="horizontal">
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end"
-                    android:gravity="center"
+                    style="@style/btnSolidRounded"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:layout_width="0dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
                     android:lineSpacingExtra="@dimen/_5pxh"
-                    android:paddingBottom="@dimen/_13pxv"
-                    android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_30pxh"
                     android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_13pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_add_exp"
                     android:textAllCaps="true"
-                    style="@style/btnSolidRounded" tools:text="@string/lbl_add_doctor"/>
+                    tools:text="@string/lbl_add_doctor" />
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
+                    style="@style/btnRoundedOutline"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5pxh"
                     android:layout_weight="0.5"
-                    android:layout_width="0dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
                     android:lineSpacingExtra="@dimen/_5pxh"
-                    android:paddingBottom="@dimen/_13pxv"
-                    android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_30pxh"
                     android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_13pxv"
                     android:singleLine="true"
                     android:text="View Doctor"
                     android:textAllCaps="true"
-                    style="@style/btnRoundedOutline" tools:text="View Doctor"/>
+                    tools:text="View Doctor" />
             </LinearLayout>
-<TextView android:ellipsize="end"
+
+            <TextView
+                style="@style/txtDMSansbold18"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10pxv"
-                android:layout_width="wrap_content"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_area"
-                style="@style/txtDMSansbold18" tools:text="@string/lbl_area"/>
+                tools:text="@string/lbl_area" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
                 >
-                <LinearLayout android:id="@+id/linearRowprice"
-                    android:layout_height="wrap_content"
+
+                <LinearLayout
+
+                    style="@style/groupStylewhite_A700cornerRadius"
 
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_marginStart="@dimen/_18pxh"
                         android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
                         android:layout_weight="0.86"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_bangalore"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_bangalore"/>
-                    <ImageView android:id="@+id/imageArrowTwelve"
+                        tools:text="@string/lbl_bangalore" />
+
+                    <ImageView
+
+                        android:layout_width="@dimen/_14pxh"
                         android:layout_height="@dimen/_14pxh"
-                        android:layout_marginBottom="@dimen/_12pxv"
-                        android:layout_marginEnd="@dimen/_14pxh"
                         android:layout_marginStart="@dimen/_186pxh"
                         android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_width="@dimen/_14pxh"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_arrow12_14x14"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout android:id="@+id/linearColumninboxTwo"
-                android:layout_gravity="center"
-                android:layout_height="wrap_content"
+            <LinearLayout
+
+                style="@style/groupStylecornerRadius_1"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="@dimen/_15pxh"
-                android:orientation="vertical" style="@style/groupStylecornerRadius_1">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxTwo"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_10pxh"
-                    android:layout_marginStart="@dimen/_1pxh"
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/txtDMSansbold10"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1pxh"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_3pxh"
                     android:singleLine="true"
                     android:text="@string/msg_general_informa"
-                    style="@style/txtDMSansbold10" tools:text="@string/msg_general_informa"/>
-                <LinearLayout android:gravity="center_horizontal"
-                    android:id="@+id/linearColumngroupninetyseven"
+                    tools:text="@string/msg_general_informa" />
+
+                <LinearLayout
+
+                    style="@style/groupStylecornerRadius_1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_17pxv"
-                    android:layout_width="match_parent"
-                    android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="2dp"
                         app:cardCornerRadius="@dimen/_20pxh"
-                        app:cardElevation="@dimen/_5pxh"
                         >
+
                         <EditText
+
+                            style="@style/etSolidRoundedOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:ellipsize="end"
                             android:hint="@string/lbl_name"
-                            android:id="@+id/etGroupNinetyNine"
                             android:inputType="text"
-                            android:layout_height="match_parent"
-                            android:layout_width="match_parent"
-                            android:paddingBottom="@dimen/_11pxv"
-                            android:paddingEnd="@dimen/_30pxh"
                             android:paddingStart="@dimen/_24pxh"
                             android:paddingTop="@dimen/_11pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingBottom="@dimen/_11pxv"
                             android:singleLine="true"
                             android:textColorHint="@color/bluegray_100"
-                            style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                            tools:ignore="Autofill" />
                     </androidx.cardview.widget.CardView>
 
 
-                    <RadioGroup android:id="@+id/rgRadiogrouplabel"
-                        android:layout_gravity="bottom|start"
+                    <RadioGroup
+
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_width="match_parent" android:orientation="horizontal">
+                        android:layout_gravity="bottom|start"
+                        android:orientation="horizontal">
+
                         <RadioButton
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_marginBottom="@dimen/_2pxv"
                             android:buttonTint="@color/bluegray_800"
                             android:ellipsize="end"
                             android:fontFamily="@font/ibm_plex_sans"
-                            android:id="@+id/rbLabel"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_2pxv"
-                            android:layout_marginStart="@dimen/_2pxh"
-                            android:layout_marginTop="@dimen/_2pxv"
-                            android:layout_width="wrap_content"
-                            android:paddingBottom="@dimen/_1pxv"
                             android:paddingStart="@dimen/_10pxh"
                             android:paddingTop="@dimen/_1pxv"
+                            android:paddingBottom="@dimen/_1pxv"
                             android:singleLine="true"
                             android:text="@string/lbl_male"
                             android:textColor="@color/bluegray_800"
                             android:textFontWeight="400"
                             android:textSize="@dimen/_14pxh"
-                            android:textStyle="bold" tools:text="@string/lbl_male"/>
+                            android:textStyle="bold"
+                            tools:text="@string/lbl_male" />
+
                         <RadioButton
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_98pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_marginBottom="@dimen/_2pxv"
                             android:buttonTint="@color/bluegray_800"
                             android:ellipsize="end"
                             android:fontFamily="@font/ibm_plex_sans"
-                            android:id="@+id/rbLabelOne"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_2pxv"
-                            android:layout_marginStart="@dimen/_98pxh"
-                            android:layout_marginTop="@dimen/_2pxv"
-                            android:layout_width="wrap_content"
-                            android:paddingBottom="@dimen/_1pxv"
                             android:paddingStart="@dimen/_10pxh"
                             android:paddingTop="@dimen/_1pxv"
+                            android:paddingBottom="@dimen/_1pxv"
                             android:singleLine="true"
                             android:text="@string/lbl_female"
                             android:textColor="@color/bluegray_800"
                             android:textFontWeight="400"
                             android:textSize="@dimen/_14pxh"
-                            android:textStyle="bold" tools:text="@string/lbl_female"/>
+                            android:textStyle="bold"
+                            tools:text="@string/lbl_female" />
                     </RadioGroup>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="@dimen/_20pxh"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="@dimen/_16pxh"
-                        app:cardElevation="@dimen/_5pxh"
+                        android:layout_marginEnd="2dp"
+                        app:cardCornerRadius="@dimen/_20pxh"
                         >
+
                         <EditText
+
+                            style="@style/etSolidRoundedOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:ellipsize="end"
                             android:hint="@string/lbl_mobile"
-                            android:id="@+id/etGroupNinetySeven"
                             android:inputType="phone"
-                            android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
-                            android:paddingBottom="@dimen/_11pxv"
-                            android:paddingEnd="@dimen/_30pxh"
                             android:paddingStart="@dimen/_22pxh"
                             android:paddingTop="@dimen/_11pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingBottom="@dimen/_11pxv"
                             android:singleLine="true"
                             android:textColorHint="@color/bluegray_100"
-                            style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                            tools:ignore="Autofill" />
                     </androidx.cardview.widget.CardView>
 
-                    <RadioGroup android:id="@+id/rgRadiogrouplabelTwo"
-                        android:layout_gravity="bottom|start"
+                    <RadioGroup
+
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:visibility="gone"
-                        android:layout_width="match_parent" android:orientation="horizontal">
+                        android:layout_gravity="bottom|start"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
                         <RadioButton
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_2pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_marginBottom="@dimen/_2pxv"
                             android:buttonTint="@color/bluegray_800"
                             android:ellipsize="end"
                             android:fontFamily="@font/ibm_plex_sans"
-                            android:id="@+id/rbLabelTwo"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_2pxv"
-                            android:layout_marginStart="@dimen/_2pxh"
-                            android:layout_marginTop="@dimen/_2pxv"
-                            android:layout_width="wrap_content"
-                            android:paddingBottom="@dimen/_1pxv"
                             android:paddingStart="@dimen/_10pxh"
                             android:paddingTop="@dimen/_1pxv"
+                            android:paddingBottom="@dimen/_1pxv"
                             android:singleLine="true"
                             android:text="@string/lbl_active"
                             android:textColor="@color/bluegray_800"
                             android:textFontWeight="400"
                             android:textSize="@dimen/_14pxh"
-                            android:textStyle="bold" tools:text="@string/lbl_active"/>
+                            android:textStyle="bold"
+                            tools:text="@string/lbl_active" />
+
                         <RadioButton
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_90pxh"
+                            android:layout_marginTop="@dimen/_2pxv"
+                            android:layout_marginBottom="@dimen/_2pxv"
                             android:buttonTint="@color/bluegray_800"
                             android:ellipsize="end"
                             android:fontFamily="@font/ibm_plex_sans"
-                            android:id="@+id/rbLabelThree"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_2pxv"
-                            android:layout_marginStart="@dimen/_90pxh"
-                            android:layout_marginTop="@dimen/_2pxv"
-                            android:layout_width="wrap_content"
-                            android:paddingBottom="@dimen/_1pxv"
                             android:paddingStart="@dimen/_10pxh"
                             android:paddingTop="@dimen/_1pxv"
+                            android:paddingBottom="@dimen/_1pxv"
                             android:singleLine="true"
                             android:text="@string/lbl_inactive"
                             android:textColor="@color/bluegray_800"
                             android:textFontWeight="400"
                             android:textSize="@dimen/_14pxh"
-                            android:textStyle="bold" tools:text="@string/lbl_inactive"/>
+                            android:textStyle="bold"
+                            tools:text="@string/lbl_inactive" />
                     </RadioGroup>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:cardCornerRadius="@dimen/_20pxh"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="@dimen/_16pxh"
-                        android:layout_marginBottom="@dimen/_16pxh"
-                        app:cardElevation="@dimen/_5pxh"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="@dimen/defaultDpMargin"
+                        app:cardCornerRadius="@dimen/_20pxh"
                         >
+
                         <EditText
+
+                            style="@style/etSolidRoundedOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                             android:ellipsize="end"
                             android:hint="@string/lbl_email_id"
-                            android:id="@+id/etGroupNinetyTwo"
                             android:inputType="textEmailAddress"
-                            android:layout_height="wrap_content"
-                            android:layout_width="match_parent"
-                            android:paddingBottom="@dimen/_12pxv"
-                            android:paddingEnd="@dimen/_30pxh"
                             android:paddingStart="@dimen/_22pxh"
                             android:paddingTop="@dimen/_10pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingBottom="@dimen/_12pxv"
                             android:singleLine="true"
                             android:textColorHint="@color/bluegray_100"
-                            style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                            tools:ignore="Autofill" />
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </LinearLayout>
@@ -305,86 +359,107 @@
 
             <!--            </FrameLayout>-->
 
-            <RadioGroup android:id="@+id/rgRadiogrouplabelFour"
+            <RadioGroup
+
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_width="match_parent" android:orientation="horizontal">
-                <RadioButton android:buttonTint="@color/bluegray_800"
+                android:orientation="horizontal">
+
+                <RadioButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2pxh"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:buttonTint="@color/bluegray_800"
                     android:ellipsize="end"
                     android:fontFamily="@font/ibm_plex_sans"
-                    android:id="@+id/rbLabelFour"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2pxv"
-                    android:layout_marginStart="@dimen/_2pxh"
-                    android:layout_width="wrap_content"
-                    android:paddingBottom="@dimen/_1pxv"
                     android:paddingStart="@dimen/_10pxh"
                     android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_married"
                     android:textColor="@color/bluegray_800"
                     android:textFontWeight="400"
                     android:textSize="@dimen/_14pxh"
-                    android:textStyle="bold" tools:text="@string/lbl_married"/>
-                <RadioButton android:buttonTint="@color/bluegray_800"
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_married" />
+
+                <RadioButton
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_80pxh"
+                    android:layout_marginBottom="@dimen/_2pxv"
+                    android:buttonTint="@color/bluegray_800"
                     android:ellipsize="end"
                     android:fontFamily="@font/ibm_plex_sans"
-                    android:id="@+id/rbLabelFive"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2pxv"
-                    android:layout_marginStart="@dimen/_80pxh"
-                    android:layout_width="wrap_content"
-                    android:paddingBottom="@dimen/_1pxv"
                     android:paddingStart="@dimen/_10pxh"
                     android:paddingTop="@dimen/_1pxv"
+                    android:paddingBottom="@dimen/_1pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_unmarried"
                     android:textColor="@color/bluegray_800"
                     android:textFontWeight="400"
                     android:textSize="@dimen/_14pxh"
-                    android:textStyle="bold" tools:text="@string/lbl_unmarried"/>
+                    android:textStyle="bold"
+                    tools:text="@string/lbl_unmarried" />
             </RadioGroup>
-            <TextView android:ellipsize="end"
-                android:id="@+id/txtInboxThree"
+
+            <TextView
+
+                style="@style/txtDMSansbold18"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_13pxv"
-                android:layout_width="wrap_content"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_6pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_select_doa"
-                style="@style/txtDMSansbold18" tools:text="@string/lbl_select_doa"/>
+                tools:text="@string/lbl_select_doa" />
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
-                <LinearLayout android:id="@+id/linearRowyyyymmdd"
-                    android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="@dimen/_16pxh"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+
+                    style="@style/groupStylewhite_A700cornerRadius"
 
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
                         android:id="@+id/doa_tv"
+                        style="@style/txtDMSansmedium14"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_10pxv"
                         android:layout_marginStart="@dimen/_22pxh"
                         android:layout_marginTop="@dimen/_12pxv"
+                        android:layout_marginBottom="@dimen/_10pxv"
                         android:layout_weight="0.81"
-                        android:layout_width="0dp" android:singleLine="true"
+                        android:ellipsize="end"
+                        android:singleLine="true"
                         android:text="@string/lbl_dd_mm_yyyy"
-                        style="@style/txtDMSansmedium14" tools:text="@string/lbl_dd_mm_yyyy"/>
-                    <ImageView android:id="@+id/doa_calendar_view"
+                        tools:text="@string/lbl_dd_mm_yyyy" />
+
+                    <ImageView
+                        android:id="@+id/doa_calendar_view"
+                        android:layout_width="@dimen/_20pxh"
                         android:layout_height="@dimen/_23pxh"
-                        android:layout_marginBottom="@dimen/_7pxv"
-                        android:layout_marginEnd="@dimen/_28pxh"
                         android:layout_marginStart="@dimen/_159pxh"
                         android:layout_marginTop="@dimen/_8pxv"
-                        android:layout_width="@dimen/_20pxh"
+                        android:layout_marginEnd="@dimen/_28pxh"
+                        android:layout_marginBottom="@dimen/_7pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_calendar_23x20"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_23x20"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_calendar_23x20" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -407,54 +482,69 @@
             <!--                -->
             <!--            </FrameLayout>-->
 
-            <LinearLayout android:id="@+id/linearColumninboxFour"
-                android:layout_gravity="top|start"
+            <LinearLayout
+
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_gravity="top|start"
                 android:layout_marginTop="@dimen/_17pxv"
-                android:layout_width="match_parent" android:orientation="vertical">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxFour"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/txtDMSansbold18"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_10pxh"
-                    android:layout_width="wrap_content"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
                     android:text="@string/lbl_select_dob"
-                    style="@style/txtDMSansbold18" tools:text="@string/lbl_select_dob"/>
+                    tools:text="@string/lbl_select_dob" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="@dimen/_20pxh"
-                    android:layout_marginBottom="@dimen/_16pxh"
-                    app:cardElevation="@dimen/_5pxh"
-                    >
-                    <LinearLayout android:id="@+id/linearRowyyyymmddOne"
-                        android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/tenDpMargin"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="@dimen/defaultDpMargin"
+                    app:cardCornerRadius="@dimen/_20pxh">
+
+                    <LinearLayout
+
+                        style="@style/groupStylewhite_A700cornerRadius"
                         android:layout_width="match_parent"
-                        android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                        <TextView android:ellipsize="end"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
                             android:id="@+id/dob_tv"
+                            style="@style/txtDMSansmedium14"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_10pxv"
                             android:layout_marginStart="@dimen/_22pxh"
                             android:layout_marginTop="@dimen/_12pxv"
+                            android:layout_marginBottom="@dimen/_10pxv"
                             android:layout_weight="0.81"
-                            android:layout_width="0dp"
+                            android:ellipsize="end"
                             android:singleLine="true"
                             android:text="@string/lbl_dd_mm_yyyy"
-                            style="@style/txtDMSansmedium14" tools:text="@string/lbl_dd_mm_yyyy"/>
-                        <ImageView android:id="@+id/dob_calendar_view"
+                            tools:text="@string/lbl_dd_mm_yyyy" />
+
+                        <ImageView
+                            android:id="@+id/dob_calendar_view"
+                            android:layout_width="@dimen/_20pxh"
                             android:layout_height="@dimen/_23pxh"
-                            android:layout_marginBottom="@dimen/_8pxv"
-                            android:layout_marginEnd="@dimen/_28pxh"
                             android:layout_marginStart="@dimen/_159pxh"
                             android:layout_marginTop="@dimen/_7pxv"
-                            android:layout_width="@dimen/_20pxh"
+                            android:layout_marginEnd="@dimen/_28pxh"
+                            android:layout_marginBottom="@dimen/_8pxv"
                             android:scaleType="fitXY"
                             android:src="@drawable/img_calendar_1"
-                            tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_1"/>
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_calendar_1" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
@@ -462,224 +552,265 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="@dimen/tenDpMargin"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="@dimen/_20pxh">
+
                 <EditText
+
+                    style="@style/etSolidRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:hint="@string/lbl_address"
-                    android:id="@+id/etGroupNinetyEight"
                     android:inputType="text"
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_22pxh"
                     android:paddingTop="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
                     android:singleLine="true"
                     android:textColorHint="@color/bluegray_100"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    tools:ignore="Autofill" />
 
             </androidx.cardview.widget.CardView>
-            <TextView android:ellipsize="end"
-                android:id="@+id/txtInboxFive"
+
+            <TextView
+
+                style="@style/txtDMSansbold12"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20pxv"
-                android:layout_width="wrap_content"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_grade"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_grade"/>
+                tools:text="@string/lbl_grade" />
 
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
                 android:layout_marginTop="@dimen/_8pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
-                <LinearLayout android:id="@+id/linearRowa"
-                    android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="@dimen/_20pxh">
+
+                <LinearLayout
+
+                    style="@style/groupStylewhite_A700cornerRadius"
                     android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <androidx.appcompat.widget.AppCompatSpinner
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40pxh"
-                        android:entries="@array/grades"
-                        />
+                        android:entries="@array/grades" />
 
                     <!--                    <TextView android:ellipsize="end" android:id="@+id/txtA"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginBottom="@dimen/_8pxv"-->
-<!--                        android:layout_marginStart="@dimen/_18pxh"-->
-<!--                        android:layout_marginTop="@dimen/_14pxv"-->
-<!--                        android:layout_weight="0.42"-->
-<!--                        android:layout_width="0dp" android:singleLine="true"-->
-<!--                        android:text="@string/lbl_a"-->
-<!--                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_a"/>-->
-<!--                    <ImageView android:id="@+id/imageArrowTwelveOne"-->
-<!--                        android:layout_height="@dimen/_14pxh"-->
-<!--                        android:layout_marginBottom="@dimen/_12pxv"-->
-<!--                        android:layout_marginEnd="@dimen/_14pxh"-->
-<!--                        android:layout_marginStart="@dimen/_259pxh"-->
-<!--                        android:layout_marginTop="@dimen/_14pxv"-->
-<!--                        android:layout_width="@dimen/_14pxh"-->
-<!--                        android:scaleType="fitXY"-->
-<!--                        android:src="@drawable/img_arrow12_14x14"-->
-<!--                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginBottom="@dimen/_8pxv"-->
+                    <!--                        android:layout_marginStart="@dimen/_18pxh"-->
+                    <!--                        android:layout_marginTop="@dimen/_14pxv"-->
+                    <!--                        android:layout_weight="0.42"-->
+                    <!--                        android:layout_width="0dp" android:singleLine="true"-->
+                    <!--                        android:text="@string/lbl_a"-->
+                    <!--                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_a"/>-->
+                    <!--                    <ImageView android:id="@+id/imageArrowTwelveOne"-->
+                    <!--                        android:layout_height="@dimen/_14pxh"-->
+                    <!--                        android:layout_marginBottom="@dimen/_12pxv"-->
+                    <!--                        android:layout_marginEnd="@dimen/_14pxh"-->
+                    <!--                        android:layout_marginStart="@dimen/_259pxh"-->
+                    <!--                        android:layout_marginTop="@dimen/_14pxv"-->
+                    <!--                        android:layout_width="@dimen/_14pxh"-->
+                    <!--                        android:scaleType="fitXY"-->
+                    <!--                        android:src="@drawable/img_arrow12_14x14"-->
+                    <!--                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>-->
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
 
-            <TextView android:ellipsize="end"
-                android:id="@+id/txtInboxSix"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_10pxh"
-                android:layout_marginStart="@dimen/_9pxh"
-                android:layout_marginTop="@dimen/_16pxv"
+            <TextView
+
+                style="@style/txtDMSansbold12"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
                 android:lineSpacingExtra="@dimen/_5pxh"
                 android:singleLine="true"
                 android:text="@string/lbl_degree"
-                style="@style/txtDMSansbold12" tools:text="@string/lbl_degree"/>
+                tools:text="@string/lbl_degree" />
 
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_2pxh"
-                android:layout_marginStart="@dimen/_7pxh"
                 android:layout_marginTop="@dimen/_6pxv"
-                app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
-                >
-            <LinearLayout android:id="@+id/linearRowselect"
-                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                app:cardCornerRadius="@dimen/_20pxh">
 
-                android:layout_width="match_parent"
-                android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtSelect"
+                <LinearLayout
+                    android:id="@+id/linearRowselect"
+                    style="@style/groupStylewhite_A700cornerRadius"
+
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_8pxv"
-                    android:layout_marginStart="@dimen/_18pxh"
-                    android:layout_marginTop="@dimen/_14pxv"
-                    android:layout_weight="0.75"
-                    android:layout_width="0dp" android:singleLine="true"
-                    android:text="@string/lbl_select"
-                    style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
-                <ImageView android:id="@+id/imageArrowTwelveTwo"
-                    android:layout_height="@dimen/_14pxh"
-                    android:layout_marginBottom="@dimen/_12pxv"
-                    android:layout_marginEnd="@dimen/_14pxh"
-                    android:layout_marginStart="@dimen/_227pxh"
-                    android:layout_marginTop="@dimen/_14pxv"
-                    android:layout_width="@dimen/_14pxh"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/img_arrow12_14x14"
-                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
-            </LinearLayout>
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        style="@style/txtDMSansmedium14_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginBottom="@dimen/_8pxv"
+                        android:layout_weight="0.75"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/lbl_select"
+                        tools:text="@string/lbl_select" />
+
+                    <ImageView
+
+                        android:layout_width="@dimen/_14pxh"
+                        android:layout_height="@dimen/_14pxh"
+                        android:layout_marginStart="@dimen/_227pxh"
+                        android:layout_marginTop="@dimen/_14pxv"
+                        android:layout_marginEnd="@dimen/_14pxh"
+                        android:layout_marginBottom="@dimen/_12pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrow12_14x14"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrow12_14x14" />
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
 
-            <LinearLayout android:id="@+id/linearColumninboxSeven"
+            <LinearLayout
+
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_10pxv"
-                android:layout_width="match_parent" android:orientation="vertical">
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxSeven"
-                    android:layout_gravity="start"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_10pxh"
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/txtDMSansbold10"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_4pxh"
                     android:singleLine="true"
                     android:text="@string/msg_professional_in"
-                    style="@style/txtDMSansbold10" tools:text="@string/msg_professional_in"/>
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxEight"
-                    android:layout_gravity="start"
+                    tools:text="@string/msg_professional_in" />
+
+                <TextView
+
+                    style="@style/txtDMSansbold18"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:layout_gravity="start"
                     android:layout_marginStart="@dimen/_13pxh"
                     android:layout_marginTop="@dimen/_16pxv"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
                     android:text="@string/lbl_specialization"
-                    style="@style/txtDMSansbold18" tools:text="@string/lbl_specialization"/>
+                    tools:text="@string/lbl_specialization" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_9pxh"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="@dimen/_10pxv"
-                    app:cardCornerRadius="@dimen/_20pxh"
-                    >
-                <LinearLayout android:id="@+id/linearRowselectOne"
-                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="@dimen/_20pxh">
 
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtSelectOne"
+                    <LinearLayout
+
+                        style="@style/groupStylewhite_A700cornerRadius"
+
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
-                        android:layout_marginStart="@dimen/_18pxh"
-                        android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_weight="0.75"
-                        android:layout_width="0dp"
-                        android:singleLine="true"
-                        android:text="@string/lbl_select"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
-                    <ImageView android:id="@+id/imageArrowTwelveThree"
-                        android:layout_height="@dimen/_14pxh"
-                        android:layout_marginBottom="@dimen/_12pxv"
-                        android:layout_marginEnd="@dimen/_14pxh"
-                        android:layout_marginStart="@dimen/_227pxh"
-                        android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_width="@dimen/_14pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/img_arrow12_14x14"
-                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
-                </LinearLayout>
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            style="@style/txtDMSansmedium14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_marginBottom="@dimen/_8pxv"
+                            android:layout_weight="0.75"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/lbl_select"
+                            tools:text="@string/lbl_select" />
+
+                        <ImageView
+
+                            android:layout_width="@dimen/_14pxh"
+                            android:layout_height="@dimen/_14pxh"
+                            android:layout_marginStart="@dimen/_227pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_marginEnd="@dimen/_14pxh"
+                            android:layout_marginBottom="@dimen/_12pxv"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow12_14x14"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/img_arrow12_14x14" />
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
-                <RadioGroup android:gravity="center_horizontal"
+
+                <RadioGroup
                     android:id="@+id/state11_specialize_radio_group"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_16pxv"
-                    android:layout_width="match_parent" android:orientation="horizontal">
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
                     <RadioButton
+                        android:id="@+id/state11_radio_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_marginBottom="@dimen/_2pxv"
+                        android:layout_weight="1"
                         android:buttonTint="@color/bluegray_800"
+                        android:checked="true"
                         android:ellipsize="end"
                         android:fontFamily="@font/ibm_plex_sans"
-                        android:id="@+id/state11_radio_button"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_2pxv"
-                        android:layout_marginTop="@dimen/_2pxv"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:checked="true"
-                        android:paddingBottom="@dimen/_1pxv"
                         android:paddingStart="@dimen/_10pxh"
                         android:paddingTop="@dimen/_1pxv"
+                        android:paddingBottom="@dimen/_1pxv"
                         android:singleLine="true"
                         android:text="@string/lbl_state_11"
                         android:textColor="@color/bluegray_800"
                         android:textFontWeight="400"
                         android:textSize="@dimen/_14pxh"
-                        android:textStyle="bold" tools:text="@string/lbl_state_11"/>
+                        android:textStyle="bold"
+                        tools:text="@string/lbl_state_11" />
+
                     <RadioButton
+                        android:id="@+id/specialized_wise_radio_button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_marginBottom="@dimen/_1pxv"
+                        android:layout_weight="1"
                         android:buttonTint="@color/bluegray_800"
                         android:ellipsize="end"
                         android:fontFamily="@font/ibm_plex_sans"
-                        android:id="@+id/specialized_wise_radio_button"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_1pxv"
-                        android:layout_marginTop="@dimen/_2pxv"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:paddingStart="@dimen/_10pxh"
                         android:paddingTop="@dimen/_1pxv"
                         android:singleLine="true"
@@ -687,67 +818,76 @@
                         android:textColor="@color/bluegray_800"
                         android:textFontWeight="400"
                         android:textSize="@dimen/_14pxh"
-                        android:textStyle="bold" tools:text="@string/msg_specialization"/>
+                        android:textStyle="bold"
+                        tools:text="@string/msg_specialization" />
                 </RadioGroup>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/focus_product_wrapper"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginTop="@dimen/_8pxh"
-                    android:id="@+id/focus_product_wrapper"
-                    >
+                    android:orientation="vertical">
 
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/txtInboxNine"
-                        android:layout_gravity="start"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_10pxh"
-                        android:layout_marginStart="@dimen/_9pxh"
+                    <TextView
+
+                        style="@style/txtDMSansbold18"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/_9pxh"
+                        android:layout_marginEnd="@dimen/_10pxh"
+                        android:ellipsize="end"
                         android:lineSpacingExtra="@dimen/_6pxh"
-                        android:singleLine="true"
 
+                        android:singleLine="true"
                         android:text="@string/lbl_focus_products"
-                        style="@style/txtDMSansbold18" tools:text="@string/lbl_focus_products"/>
+                        tools:text="@string/lbl_focus_products" />
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/_4pxh"
                         android:layout_marginStart="@dimen/_5pxh"
-                        android:layout_marginBottom="@dimen/_8pxh"
                         android:layout_marginTop="@dimen/_9pxv"
+                        android:layout_marginEnd="@dimen/_4pxh"
+                        android:layout_marginBottom="@dimen/_8pxh"
                         app:cardCornerRadius="@dimen/_20pxh"
-                        app:cardElevation="@dimen/_5pxh"
-
                         >
-                        <LinearLayout android:id="@+id/linearRowselectTwo"
-                            android:layout_height="wrap_content"
+
+                        <LinearLayout
+
+                            style="@style/groupStylewhite_A700cornerRadius"
 
                             android:layout_width="match_parent"
-                            android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                            <TextView android:ellipsize="end"
-                                android:id="@+id/txtSelectTwo"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                style="@style/txtDMSansmedium14_1"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="@dimen/_8pxv"
                                 android:layout_marginStart="@dimen/_18pxh"
                                 android:layout_marginTop="@dimen/_14pxv"
+                                android:layout_marginBottom="@dimen/_8pxv"
                                 android:layout_weight="0.75"
-                                android:layout_width="0dp"
+                                android:ellipsize="end"
                                 android:singleLine="true"
                                 android:text="@string/lbl_select"
-                                style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>
-                            <ImageView android:id="@+id/imageArrowTwelveFour"
+                                tools:text="@string/lbl_select" />
+
+                            <ImageView
+
+                                android:layout_width="@dimen/_14pxh"
                                 android:layout_height="@dimen/_14pxh"
-                                android:layout_marginBottom="@dimen/_12pxv"
-                                android:layout_marginEnd="@dimen/_14pxh"
                                 android:layout_marginStart="@dimen/_227pxh"
                                 android:layout_marginTop="@dimen/_14pxv"
-                                android:layout_width="@dimen/_14pxh"
+                                android:layout_marginEnd="@dimen/_14pxh"
+                                android:layout_marginBottom="@dimen/_12pxv"
                                 android:scaleType="fitXY"
                                 android:src="@drawable/img_arrow12_14x14"
-                                tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>
+                                tools:ignore="ContentDescription"
+                                tools:src="@drawable/img_arrow12_14x14" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -755,308 +895,339 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_3pxh"
-                    android:layout_marginStart="@dimen/_6pxh"
-                    android:layout_marginTop="@dimen/_30pxv"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/TwentyDpMargin"
+                    android:layout_marginEnd="2dp"
                     app:cardCornerRadius="@dimen/_20pxh"
-                    app:cardElevation="@dimen/_5pxh"
 
                     >
-                <EditText
-                    android:ellipsize="end"
-                    android:hint="@string/lbl_remark"
-                    android:id="@+id/etGroup112"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
 
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_22pxh"
-                    android:paddingTop="@dimen/_11pxv"
-                    android:singleLine="true"
-                    android:textColorHint="@color/bluegray_100"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    <EditText
+
+                        style="@style/etSolidRoundedOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+
+                        android:hint="@string/lbl_remark"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_22pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:textColorHint="@color/bluegray_100"
+                        tools:ignore="Autofill" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_2pxh"
-                    android:layout_marginStart="@dimen/_7pxh"
-                    android:layout_marginTop="@dimen/_28pxv"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="@dimen/TwentyDpMargin"
+                    android:layout_marginEnd="2dp"
                     app:cardCornerRadius="@dimen/_20pxh"
-                    app:cardElevation="@dimen/_5pxh"
 
                     >
-                <EditText
-                    android:ellipsize="end"
-                    android:hint="@string/lbl_other"
-                    android:id="@+id/etGroup113"
-                    android:inputType="text"
-                    android:layout_height="wrap_content"
 
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
-                    android:paddingStart="@dimen/_22pxh"
-                    android:paddingTop="@dimen/_11pxv"
-                    android:singleLine="true"
-                    android:textColorHint="@color/bluegray_100"
-                    style="@style/etSolidRoundedOutline" tools:ignore="Autofill"/>
+                    <EditText
+
+                        style="@style/etSolidRoundedOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+
+                        android:hint="@string/lbl_other"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/_22pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:textColorHint="@color/bluegray_100"
+                        tools:ignore="Autofill" />
                 </androidx.cardview.widget.CardView>
 
-                <LinearLayout android:gravity="start"
-                    android:id="@+id/linearRoweye"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_10pxh"
-                    android:layout_marginStart="@dimen/_6pxh"
-                    android:layout_marginTop="@dimen/_26pxv"
-                    android:layout_width="match_parent" android:orientation="horizontal">
-                   <androidx.appcompat.widget.AppCompatButton
-                            android:ellipsize="end"
-                            android:gravity="center"
-                            android:id="@+id/btnLatitude"
-                       android:layout_margin="@dimen/_5pxh"
-                            android:layout_height="@dimen/_40pxv"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:paddingBottom="@dimen/_11pxv"
-                            android:paddingEnd="@dimen/_5pxh"
-                            android:paddingStart="@dimen/_6pxh"
-                            android:paddingTop="@dimen/_11pxv"
-                            android:textColor="@color/black"
-                            android:singleLine="true"
-                            android:text="@string/lbl_latitude"
-                            android:textAllCaps="false"
-                            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_latitude"/>
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:ellipsize="end"
-                            android:gravity="center"
-                            android:id="@+id/btnLongitude"
-                            android:layout_height="@dimen/_40pxv"
-                            android:layout_margin="@dimen/_5pxh"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:textColor="@color/black"
-                            android:paddingBottom="@dimen/_11pxv"
-                            android:paddingEnd="@dimen/_6pxh"
-                            android:paddingStart="@dimen/_6pxh"
-                            android:paddingTop="@dimen/_11pxv"
-                            android:singleLine="true"
-                            android:text="@string/lbl_longitude"
-                            android:textAllCaps="false"
-                            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_longitude"/>
+                <LinearLayout
 
-                    <ImageView android:id="@+id/imageEye"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_26pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLatitude"
+                        style="@style/btnSolidRoundedOutline"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40pxv"
+                        android:layout_margin="@dimen/_5pxh"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_6pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_5pxh"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_latitude"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        tools:text="@string/lbl_latitude" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLongitude"
+                        style="@style/btnSolidRoundedOutline"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40pxv"
+                        android:layout_margin="@dimen/_5pxh"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_6pxh"
+                        android:paddingTop="@dimen/_11pxv"
+                        android:paddingEnd="@dimen/_6pxh"
+                        android:paddingBottom="@dimen/_11pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_longitude"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        tools:text="@string/lbl_longitude" />
+
+                    <ImageView
+
+                        android:layout_width="@dimen/_17pxh"
                         android:layout_height="@dimen/_22pxh"
-                        android:layout_marginBottom="@dimen/_9pxv"
                         android:layout_marginStart="@dimen/_81pxh"
                         android:layout_marginTop="@dimen/_9pxv"
-                        android:layout_width="@dimen/_17pxh"
+                        android:layout_marginBottom="@dimen/_9pxv"
                         android:scaleType="fitXY"
                         android:src="@drawable/location_icon"
-                        tools:ignore="ContentDescription" tools:src="@drawable/location_icon"/>
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/location_icon" />
                 </LinearLayout>
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxTen"
-                    android:layout_gravity="start"
+
+                <TextView
+
+                    style="@style/txtDMSansbold10"
+                    android:layout_width="wrap_content"
 
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_gravity="start"
                     android:layout_marginStart="@dimen/_4pxh"
                     android:layout_marginTop="@dimen/_22pxv"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_4pxh"
                     android:singleLine="true"
                     android:text="@string/msg_meeting_informa"
-                    style="@style/txtDMSansbold10" tools:text="@string/msg_meeting_informa"/>
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxEleven"
-                    android:layout_gravity="start"
+                    tools:text="@string/msg_meeting_informa" />
+
+                <TextView
+
+                    style="@style/txtDMSansbold18"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_gravity="start"
                     android:layout_marginStart="@dimen/_9pxh"
                     android:layout_marginTop="@dimen/_30pxv"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
                     android:text="@string/msg_select_from_tim"
-                    style="@style/txtDMSansbold18" tools:text="@string/msg_select_from_tim"/>
+                    tools:text="@string/msg_select_from_tim" />
 
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardElevation="@dimen/_5pxh"
-                    android:layout_marginEnd="@dimen/_4pxh"
-                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_marginEnd="2dp"
                     app:cardCornerRadius="@dimen/_20pxh"
                     >
-                <LinearLayout android:id="@+id/linearRowhhmm"
-                    android:layout_height="wrap_content"
 
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/time_from_tv"
+                    <LinearLayout
+
+                        style="@style/groupStylewhite_A700cornerRadius"
+
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
-                        android:layout_marginStart="@dimen/_18pxh"
-                        android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_weight="0.7"
-                        android:textColor="@color/black"
-                        android:layout_width="0dp"
-                        android:singleLine="true"
-                        android:text="@string/lbl_hh_mm"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_hh_mm"/>
-                    <ImageView android:id="@+id/time_from_clock_view"
-                        android:layout_height="@dimen/_20pxh"
-                        android:layout_marginBottom="@dimen/_7pxv"
-                        android:layout_marginEnd="@dimen/_15pxh"
-                        android:layout_marginStart="@dimen/_216pxh"
-                        android:layout_marginTop="@dimen/_13pxv"
-                        android:layout_width="@dimen/_20pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/clock_icon"
-                        tools:ignore="ContentDescription" tools:src="@drawable/clock_icon"/>
-                </LinearLayout>
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/time_from_tv"
+                            style="@style/txtDMSansmedium14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_marginBottom="@dimen/_8pxv"
+                            android:layout_weight="0.7"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/lbl_hh_mm"
+                            android:textColor="@color/black"
+                            tools:text="@string/lbl_hh_mm" />
+
+                        <ImageView
+                            android:id="@+id/time_from_clock_view"
+                            android:layout_width="@dimen/_20pxh"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_marginStart="@dimen/_216pxh"
+                            android:layout_marginTop="@dimen/_13pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginBottom="@dimen/_7pxv"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/clock_icon"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/clock_icon" />
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxTwelve"
-                    android:layout_gravity="start"
+                <TextView
+
+                    style="@style/txtDMSansbold18"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_gravity="start"
                     android:layout_marginStart="@dimen/_9pxh"
                     android:layout_marginTop="@dimen/_24pxv"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
                     android:text="@string/lbl_select_to_time"
-                    style="@style/txtDMSansbold18" tools:text="@string/lbl_select_to_time"/>
+                    tools:text="@string/lbl_select_to_time" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_4pxh"
-                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="@dimen/_9pxv"
-                    app:cardCornerRadius="@dimen/_20pxh"
-                    app:cardElevation="@dimen/_5pxh"
-                    >
-                <LinearLayout android:id="@+id/linearRowhhmmOne"
-                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="@dimen/_20pxh">
 
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
-                    <TextView android:ellipsize="end"
-                        android:id="@+id/time_to_tv"
+                    <LinearLayout
+
+                        style="@style/groupStylewhite_A700cornerRadius"
+
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_8pxv"
-                        android:layout_marginStart="@dimen/_18pxh"
-                        android:layout_marginTop="@dimen/_14pxv"
-                        android:layout_weight="0.7"
-                        android:layout_width="0dp"
-                        android:textColor="@color/black"
-                        android:singleLine="true"
-                        android:text="@string/lbl_hh_mm"
-                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_hh_mm"/>
-                    <ImageView android:id="@+id/time_to_clock_view"
-                        android:layout_height="@dimen/_20pxh"
-                        android:layout_marginBottom="@dimen/_7pxv"
-                        android:layout_marginEnd="@dimen/_15pxh"
-                        android:layout_marginStart="@dimen/_216pxh"
-                        android:layout_marginTop="@dimen/_13pxv"
-                        android:layout_width="@dimen/_20pxh"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/clock_icon"
-                        tools:ignore="ContentDescription" tools:src="@drawable/clock_icon"/>
-                </LinearLayout>
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/time_to_tv"
+                            style="@style/txtDMSansmedium14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18pxh"
+                            android:layout_marginTop="@dimen/_14pxv"
+                            android:layout_marginBottom="@dimen/_8pxv"
+                            android:layout_weight="0.7"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@string/lbl_hh_mm"
+                            android:textColor="@color/black"
+                            tools:text="@string/lbl_hh_mm" />
+
+                        <ImageView
+                            android:id="@+id/time_to_clock_view"
+                            android:layout_width="@dimen/_20pxh"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_marginStart="@dimen/_216pxh"
+                            android:layout_marginTop="@dimen/_13pxv"
+                            android:layout_marginEnd="@dimen/_15pxh"
+                            android:layout_marginBottom="@dimen/_7pxv"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/clock_icon"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/clock_icon" />
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <TextView android:ellipsize="end"
-                    android:id="@+id/txtInboxThirteen"
-                    android:layout_gravity="start"
+                <TextView
+
+                    style="@style/txtDMSansbold18"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_gravity="start"
                     android:layout_marginStart="@dimen/_9pxh"
                     android:layout_marginTop="@dimen/_30pxv"
-                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
                     android:lineSpacingExtra="@dimen/_6pxh"
                     android:singleLine="true"
                     android:text="@string/lbl_days"
-                    style="@style/txtDMSansbold18" tools:text="@string/lbl_days"/>
+                    tools:text="@string/lbl_days" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_4pxh"
-                    android:layout_marginStart="@dimen/_5pxh"
+                    android:layout_marginStart="2dp"
                     android:layout_marginTop="@dimen/_7pxv"
-                    app:cardCornerRadius="@dimen/_20pxh"
-                    app:cardElevation="@dimen/_5pxh"
-                    >
-                <LinearLayout android:id="@+id/linearRowselectThree"
-                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    app:cardCornerRadius="@dimen/_20pxh">
 
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal" style="@style/groupStylewhite_A700cornerRadius">
+                    <LinearLayout
 
-                    <com.niyoinsfa.app.utils.MultiSpinner
+                        style="@style/groupStylewhite_A700cornerRadius"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_40pxh"
-                        android:id="@+id/days_spinner"
-                        android:spinnerMode="dropdown"
-                        />
-                    <!--                    <TextView android:ellipsize="end"-->
-<!--                        android:id="@+id/txtSelectThree"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginBottom="@dimen/_8pxv"-->
-<!--                        android:layout_marginStart="@dimen/_18pxh"-->
-<!--                        android:layout_marginTop="@dimen/_14pxv"-->
-<!--                        android:layout_weight="0.75"-->
-<!--                        android:layout_width="0dp"-->
-<!--                        android:singleLine="true"-->
-<!--                        android:text="@string/lbl_select"-->
-<!--                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>-->
-<!--                    <ImageView android:id="@+id/imageArrowTwelveFive"-->
-<!--                        android:layout_height="@dimen/_14pxh"-->
-<!--                        android:layout_marginBottom="@dimen/_12pxv"-->
-<!--                        android:layout_marginEnd="@dimen/_14pxh"-->
-<!--                        android:layout_marginStart="@dimen/_227pxh"-->
-<!--                        android:layout_marginTop="@dimen/_14pxv"-->
-<!--                        android:layout_width="@dimen/_14pxh"-->
-<!--                        android:scaleType="fitXY"-->
-<!--                        android:src="@drawable/img_arrow12_14x14"-->
-<!--                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>-->
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.niyoinsfa.app.utils.MultiSpinner
+                            android:id="@+id/days_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40pxh"
+                            android:spinnerMode="dropdown" />
+                        <!--                    <TextView android:ellipsize="end"-->
+                        <!--                        android:id="@+id/txtSelectThree"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_marginBottom="@dimen/_8pxv"-->
+                        <!--                        android:layout_marginStart="@dimen/_18pxh"-->
+                        <!--                        android:layout_marginTop="@dimen/_14pxv"-->
+                        <!--                        android:layout_weight="0.75"-->
+                        <!--                        android:layout_width="0dp"-->
+                        <!--                        android:singleLine="true"-->
+                        <!--                        android:text="@string/lbl_select"-->
+                        <!--                        style="@style/txtDMSansmedium14_1" tools:text="@string/lbl_select"/>-->
+                        <!--                    <ImageView android:id="@+id/imageArrowTwelveFive"-->
+                        <!--                        android:layout_height="@dimen/_14pxh"-->
+                        <!--                        android:layout_marginBottom="@dimen/_12pxv"-->
+                        <!--                        android:layout_marginEnd="@dimen/_14pxh"-->
+                        <!--                        android:layout_marginStart="@dimen/_227pxh"-->
+                        <!--                        android:layout_marginTop="@dimen/_14pxv"-->
+                        <!--                        android:layout_width="@dimen/_14pxh"-->
+                        <!--                        android:scaleType="fitXY"-->
+                        <!--                        android:src="@drawable/img_arrow12_14x14"-->
+                        <!--                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrow12_14x14"/>-->
+                    </LinearLayout>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.appcompat.widget.AppCompatButton
-                    android:ellipsize="end" android:gravity="center"
                     android:id="@+id/btnSubmit"
+                    style="@style/btnSolidRounded_1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/_23pxh"
-                    android:layout_marginStart="@dimen/_23pxh"
                     android:layout_marginTop="@dimen/_31pxv"
                     android:layout_marginBottom="@dimen/_16pxh"
-                    android:layout_width="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
                     android:lineSpacingExtra="@dimen/_5pxh"
-                    android:paddingBottom="@dimen/_11pxv"
-                    android:paddingEnd="@dimen/_30pxh"
                     android:paddingStart="@dimen/_30pxh"
                     android:paddingTop="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
                     android:singleLine="true"
                     android:text="@string/lbl_submit"
                     android:textAllCaps="true"
-                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_submit"/>
+                    tools:text="@string/lbl_submit" />
             </LinearLayout>
         </LinearLayout>
-
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

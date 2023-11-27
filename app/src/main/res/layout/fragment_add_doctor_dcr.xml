@@ -25,7 +25,6 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/txtInbox"
                 style="@style/txtDMSansbold12_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -39,7 +38,7 @@
                 tools:text="@string/lbl_user_type" />
 
             <TextView
-                android:id="@+id/txtInboxOne"
+
                 style="@style/txtDMSansbold14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,13 +54,13 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_3pxh"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_marginTop="@dimen/_11pxv"
-                android:layout_marginEnd="@dimen/_14pxh"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
-                    android:id="@+id/linearRowdate"
+
                     style="@style/groupStylewhite_A700cornerRadius"
                     android:layout_width="match_parent"
 
@@ -100,7 +99,7 @@
             </androidx.cardview.widget.CardView>
 
             <RadioGroup
-                android:id="@+id/linearRowlabel"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_16pxh"
@@ -108,7 +107,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/rbLabel"
+
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_2pxv"
@@ -148,7 +147,7 @@
                     tools:text="@string/lbl_additional" />
 
                 <ImageView
-                    android:id="@+id/imageClose"
+
                     android:layout_width="@dimen/_20pxh"
                     android:layout_height="@dimen/_20pxh"
                     android:layout_marginStart="@dimen/_34pxh"
@@ -331,6 +330,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh"
                 >
                 <LinearLayout
@@ -375,6 +376,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh"
                 >
                 <LinearLayout
@@ -404,7 +407,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/txtInboxTwo"
+
                 style="@style/txtDMSansbold12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -422,10 +425,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
-                    android:id="@+id/linearRowselect"
+
                     style="@style/groupStylewhite_A700cornerRadius"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -478,6 +483,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -531,6 +538,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -584,6 +593,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -636,6 +647,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -738,10 +751,10 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 android:layout_marginTop="@dimen/_16pxh"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh"
                 >
                 <EditText
                     android:ellipsize="end"

@@ -100,6 +100,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -160,6 +162,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -212,6 +216,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -264,6 +270,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_8pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
                 app:cardCornerRadius="@dimen/_20pxh">
 
                 <LinearLayout
@@ -302,10 +310,11 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4pxh"
-                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="@dimen/TwentyDpMargin"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh">
+                >
 
                 <EditText
                     style="@style/etSolidRoundedOutline"
@@ -326,10 +335,11 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4pxh"
-                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="@dimen/TwentyDpMargin"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh">
+                >
 
                 <EditText
                     style="@style/etSolidRoundedOutline"
@@ -350,10 +360,11 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4pxh"
-                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="@dimen/TwentyDpMargin"
                 app:cardCornerRadius="@dimen/_20pxh"
-                app:cardElevation="@dimen/_5pxh">
+                >
 
                 <EditText
                     style="@style/etSolidRoundedOutline"
@@ -606,6 +617,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     app:cardCornerRadius="@dimen/_20pxh"
                     >
                     <LinearLayout
@@ -638,9 +651,10 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
                     android:layout_marginTop="@dimen/_16pxh"
-                    android:layout_marginBottom="@dimen/_8pxh"
+                    android:layout_marginBottom="@dimen/defaultDpMargin"
                     app:cardCornerRadius="@dimen/_20pxh"
                     app:cardElevation="@dimen/_5pxh">
 
